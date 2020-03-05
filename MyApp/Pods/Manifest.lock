@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (5.0.0)
+  - audioplayers (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_lottie_brainco (0.0.1):
+    - Flutter
+    - lottie-ios (~> 3.1.5)
+  - FlutterPluginRegistrant (0.0.1):
+    - audioplayers
+    - Flutter
+    - flutter_lottie_brainco
+    - path_provider
+  - focus_game (0.0.1):
+    - Flutter
+  - lottie-ios (3.1.6)
+  - path_provider (0.0.1):
+    - Flutter
+  - path_provider_macos (0.0.1):
+    - Flutter
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - audioplayers (from `../my_flutter/.ios/Flutter/.symlinks/audioplayers/ios`)
+  - Flutter (from `../my_flutter/.ios/Flutter/engine`)
+  - flutter_lottie_brainco (from `../my_flutter/.ios/Flutter/.symlinks/flutter_lottie_brainco/ios`)
+  - FlutterPluginRegistrant (from `../my_flutter/.ios/Flutter/FlutterPluginRegistrant`)
+  - focus_game (from `../my_flutter/.ios/Flutter`)
+  - path_provider (from `../my_flutter/.ios/Flutter/.symlinks/path_provider/ios`)
+  - path_provider_macos (from `../my_flutter/.ios/Flutter/.symlinks/path_provider_macos/ios`)
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs:
+    - Alamofire
+    - lottie-ios
+    - SnapKit
+
+EXTERNAL SOURCES:
+  audioplayers:
+    :path: "../my_flutter/.ios/Flutter/.symlinks/audioplayers/ios"
+  Flutter:
+    :path: "../my_flutter/.ios/Flutter/engine"
+  flutter_lottie_brainco:
+    :path: "../my_flutter/.ios/Flutter/.symlinks/flutter_lottie_brainco/ios"
+  FlutterPluginRegistrant:
+    :path: "../my_flutter/.ios/Flutter/FlutterPluginRegistrant"
+  focus_game:
+    :path: "../my_flutter/.ios/Flutter"
+  path_provider:
+    :path: "../my_flutter/.ios/Flutter/.symlinks/path_provider/ios"
+  path_provider_macos:
+    :path: "../my_flutter/.ios/Flutter/.symlinks/path_provider_macos/ios"
+
+SPEC CHECKSUMS:
+  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  audioplayers: 84f968cea3f2deab00ec4f8ff53358b3c0b3992c
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_lottie_brainco: f6e8d869433e089af3b942e52df24ed848343e1e
+  FlutterPluginRegistrant: 5a49360f4830d8f7f748f35cdcb9e1f7005d9d56
+  focus_game: 4a8d54d713185daba6b7b13802a3a492da803120
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  path_provider: fb74bd0465e96b594bb3b5088ee4a4e7bb1f2a9d
+  path_provider_macos: f760a3c5b04357c380e2fddb6f9db6f3015897e0
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 479a7227dd9e1b86bb10ba60dbb0b60b5cb7c339
+
+COCOAPODS: 1.9.0

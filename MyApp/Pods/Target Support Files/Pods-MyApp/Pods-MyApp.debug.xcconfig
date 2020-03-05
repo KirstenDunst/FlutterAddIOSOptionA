@@ -1,0 +1,13 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire" "${PODS_CONFIGURATION_BUILD_DIR}/FlutterPluginRegistrant" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit" "${PODS_CONFIGURATION_BUILD_DIR}/audioplayers" "${PODS_CONFIGURATION_BUILD_DIR}/flutter_lottie_brainco" "${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios" "${PODS_CONFIGURATION_BUILD_DIR}/path_provider" "${PODS_ROOT}/../../my_flutter/.ios/Flutter" "${PODS_ROOT}/../../my_flutter/.ios/Flutter/engine"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FlutterPluginRegistrant/FlutterPluginRegistrant.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/audioplayers/audioplayers.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/flutter_lottie_brainco/flutter_lottie_brainco.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios/Lottie.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/path_provider/path_provider.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/FlutterPluginRegistrant/FlutterPluginRegistrant.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/audioplayers/audioplayers.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/flutter_lottie_brainco/flutter_lottie_brainco.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/path_provider/path_provider.framework/Headers" -iframework "${PODS_ROOT}/../../my_flutter/.ios/Flutter/engine" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/FlutterPluginRegistrant" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/audioplayers" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/flutter_lottie_brainco" -iframework "${PODS_ROOT}/../../my_flutter/.ios/Flutter" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/path_provider"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "Alamofire" -framework "App" -framework "CFNetwork" -framework "CoreGraphics" -framework "Flutter" -framework "FlutterPluginRegistrant" -framework "Lottie" -framework "QuartzCore" -framework "SnapKit" -framework "UIKit" -framework "audioplayers" -framework "flutter_lottie_brainco" -framework "path_provider"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

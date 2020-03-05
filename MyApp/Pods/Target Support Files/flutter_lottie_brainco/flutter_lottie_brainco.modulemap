@@ -1,0 +1,6 @@
+framework module flutter_lottie_brainco {
+  umbrella header "flutter_lottie_brainco-umbrella.h"
+
+  export *
+  module * { export * }
+}
