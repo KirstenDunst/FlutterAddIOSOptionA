@@ -26,13 +26,15 @@ class ViewController: UIViewController {
     }
     
     @objc func btnChoose() {
-        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
+        let flutterEngine = FlutterEngine(name: "")
+        flutterEngine.run()
+        GeneratedPluginRegistrant.register(with: flutterEngine);
+//        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
         let flutterController =
-            SecondViewController(engine: flutterEngine, nibName: nil, bundle: nil)
-        flutterController.pushRoute("ROCKET_GAME")
-//        let channelName = "tech.brainco.focusgame/router"
-//        let messageChannel = FlutterMethodChannel.init(name: channelName, binaryMessenger: flutterController.binaryMessenger)
-//        messageChannel.invokeMethod("navigate", arguments: ["path":"ROCKET_GAME","data":["duration":30]])
+            SecondViewController.init(engine: flutterEngine, nibName: nil, bundle: nil)
+        flutterController.channelMethodArguments = ["navigate":["path":"ROCKET_GAME","data":["duration":30]]]
+        flutterController.channelName = "tech.brainco.focusgame/router"
+//        flutterController.pushRoute("ROCKET_GAME")
         self.navigationController?.pushViewController(flutterController, animated: true)
     }
 

@@ -11,22 +11,21 @@ import Flutter
 import FlutterPluginRegistrant
 
 @UIApplicationMain
-class AppDelegate: FlutterAppDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    var window: UIWindow?
-    lazy var flutterEngine = FlutterEngine(name: "")
+    var window: UIWindow?
     
-    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        flutterEngine.run();
-        GeneratedPluginRegistrant.register(with: self.flutterEngine);
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window?.rootViewController = UINavigationController.init(rootViewController: ViewController())
         self.window?.backgroundColor = .white
         self.window?.makeKeyAndVisible()
-        //        return true
-        return super.application(application, didFinishLaunchingWithOptions: launchOptions);
+                return true
+//        return super.application(application, didFinishLaunchingWithOptions: launchOptions);
     }
+    
+    
 }
 
 

@@ -44,6 +44,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // 注册一个通知,监听原生传给自己的值
+  static EventChannel _eventChannel = EventChannel(RouterConstants.channelName);
+
   @override
   void initState() {
     super.initState();
@@ -69,8 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('HomePage!'),
             OutlineButton(
               child: Text(RocketScreen.routeName),
-              onPressed: () =>
-                  Navigator.pushNamed(context, RocketScreen.routeName),
+              onPressed: () => {
+                 // 监听事件，同时发送参数12345
+                _eventChannel.receiveBroadcastStream(12345).listen(_onEvent,onError: _onError),
+                Navigator.pushNamed(context, RocketScreen.routeName),
+              },
             ),
             OutlineButton(
               child: Text('Audio start'),
@@ -105,6 +111,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.add),
       ),
     );
+  }
+
+
+  // 回调事件
+  static void _onEvent(Object event){
+    print('eventChannel回掉：' + event.toString());
+  }
+
+  // 错误返回
+  static void _onError(Object error) {
   }
 
   void _onFabClicked() {}
