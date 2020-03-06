@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Flutter
-import FlutterPluginRegistrant
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
