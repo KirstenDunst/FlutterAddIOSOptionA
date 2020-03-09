@@ -3,7 +3,6 @@ import 'dart:math';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_lottie_brainco/lottie_view.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -60,10 +59,6 @@ class RocketPadPresentation extends StatefulWidget {
 
 class _RocketPadPresentationState extends State<RocketPadPresentation>
     with SingleTickerProviderStateMixin, WidgetsBindingObserver {
-      
-  // 创建一个给native的channel (类似iOS的通知）
-  static const methodChannel = const MethodChannel('tech.brainco.focusgame/router');
-
   StreamSubscription<DialogType> _dialogSubscription;
   StreamSubscription<double> _focusSubscription;
   StreamSubscription<GameState> _gameStateSubscription;
@@ -275,10 +270,7 @@ class _RocketPadPresentationState extends State<RocketPadPresentation>
                           '试着用你的注意力来操控一下小火箭吧！你的专注力越高，小火箭飞得越快，专注力越低，小火箭飞得越慢。')),
                   actions: <Widget>[
                     FlatButton(
-                      onPressed: () => {
-                        methodChannel.invokeMethod('csx Test begain','123456'),
-                        Navigator.of(context).pop(false)
-                      },
+                      onPressed: () => Navigator.of(context).pop(false),
                       child: Text('取消'),
                     ),
                     FlatButton(
@@ -411,10 +403,7 @@ class _RocketPadPresentationState extends State<RocketPadPresentation>
       content: Text('您专注力最佳值xxx'),
       actions: <Widget>[
         FlatButton(
-            onPressed: () => {
-              methodChannel.invokeMethod('csx Test archive','123456'),
-              Navigator.of(context).pop(false)
-            },
+            onPressed: () => Navigator.of(context).pop(false),
             child: Text('取消')),
         FlatButton(
             onPressed: () => Navigator.of(context).pop(true),
